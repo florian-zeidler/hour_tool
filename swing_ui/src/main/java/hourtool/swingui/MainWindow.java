@@ -10,4 +10,13 @@ import javax.swing.*;
  * To change this template use File | Settings | File Templates.
  */
 public class MainWindow extends JFrame {
+
+    public MainWindow(){
+        super("Hour Tool");
+        JLabel start_date = new JLabel("start_date");
+        start_date.setText("Start Datum");
+        start_date.setName("start_date");
+        this.getContentPane().add(start_date);
+
+    }
 }

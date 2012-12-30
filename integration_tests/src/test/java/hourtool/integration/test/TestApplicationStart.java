@@ -39,5 +39,6 @@ public class TestApplicationStart {
     @Test
     public void testWindowExistsAndIsShown(){
         fixture.requireEnabled();
+        fixture.label("start_date").requireText("Start Datum");
     }
 }
