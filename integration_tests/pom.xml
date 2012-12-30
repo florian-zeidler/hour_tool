@@ -22,9 +22,14 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.googlecode.windowlicker</groupId>
-            <artifactId>windowlicker-swing</artifactId>
-            <version>r268</version>
+            <groupId>org.easytesting</groupId>
+            <artifactId>fest-swing</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>hour_tool</groupId>
+            <artifactId>swing_ui</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>
