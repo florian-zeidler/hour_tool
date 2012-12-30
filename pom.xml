@@ -10,6 +10,7 @@
     <modules>
         <module>swing_ui</module>
         <module>tool</module>
+        <module>integration_tests</module>
     </modules>
     <build>
         <plugins>
