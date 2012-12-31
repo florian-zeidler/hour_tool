@@ -1,6 +1,7 @@
 package hourtool.swingui;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,10 +14,14 @@ public class MainWindow extends JFrame {
 
     public MainWindow(){
         super("Hour Tool");
+        //this.setSize(new Dimension(640,480));
         JLabel start_date = new JLabel("start_date");
         start_date.setText("Start Datum");
         start_date.setName("start_date");
         this.getContentPane().add(start_date);
-
+        this.setVisible(true);
+        JSpinner startDateSpinner = new JSpinner(new SpinnerDateModel());
+        startDateSpinner.setName("start_date_spinner");
+        this.getContentPane().add(startDateSpinner);
     }
 }

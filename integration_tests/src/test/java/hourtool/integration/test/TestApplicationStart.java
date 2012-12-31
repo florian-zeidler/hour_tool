@@ -8,6 +8,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.awt.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: florianzeidler
@@ -40,5 +42,6 @@ public class TestApplicationStart {
     public void testWindowExistsAndIsShown(){
         fixture.requireEnabled();
         fixture.label("start_date").requireText("Start Datum");
+        fixture.spinner("start_date_spinner").requireEnabled();
     }
 }
