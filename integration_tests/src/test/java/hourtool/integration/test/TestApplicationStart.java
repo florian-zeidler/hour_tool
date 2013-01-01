@@ -43,5 +43,6 @@ public class TestApplicationStart {
         fixture.requireEnabled();
         fixture.label("start_date").requireText("Start Datum");
         fixture.spinner("start_date_spinner").requireEnabled();
+        fixture.label("stop_date").requireText("End Datum");
     }
 }

@@ -23,5 +23,8 @@ public class MainWindow extends JFrame {
         JSpinner startDateSpinner = new JSpinner(new SpinnerDateModel());
         startDateSpinner.setName("start_date_spinner");
         this.getContentPane().add(startDateSpinner);
+        JLabel stop_date = new JLabel("End Datum");
+        stop_date.setName("stop_date");
+        this.getContentPane().add(stop_date);
     }
 }
