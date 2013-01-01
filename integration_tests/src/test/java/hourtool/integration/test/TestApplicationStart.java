@@ -22,7 +22,7 @@ public class TestApplicationStart {
     private FrameFixture fixture;
 
     @Before
-    public void init(){
+    public void init() {
         MainWindow window = GuiActionRunner.execute(new GuiQuery<MainWindow>() {
             @Override
             protected MainWindow executeInEDT() throws Throwable {
@@ -34,15 +34,16 @@ public class TestApplicationStart {
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         fixture.cleanUp();
     }
 
     @Test
-    public void testWindowExistsAndIsShown(){
+    public void testWindowExistsAndIsShown() {
         fixture.requireEnabled();
         fixture.label("start_date").requireText("Start Datum");
         fixture.spinner("start_date_spinner").requireEnabled();
         fixture.label("stop_date").requireText("End Datum");
+        fixture.spinner("stop_date_spinner").requireEnabled();
     }
 }
