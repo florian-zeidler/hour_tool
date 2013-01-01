@@ -14,20 +14,36 @@ public class MainWindow extends JFrame {
 
     public MainWindow() {
         super("Hour Tool");
-        //this.setSize(new Dimension(640,480));
+        this.setSize(new Dimension(250,100));
+        GridBagLayout layout = new GridBagLayout();
+        this.getContentPane().setLayout(layout);
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.gridx = 0;
+        constraints.gridy = 0;
         JLabel startDate = new JLabel("start_date");
         startDate.setText("Start Datum");
         startDate.setName("start_date");
-        this.getContentPane().add(startDate);
+        this.getContentPane().add(startDate,constraints);
+        constraints.gridy = 1;
         JSpinner startDateSpinner = new JSpinner(new SpinnerDateModel());
         startDateSpinner.setName("start_date_spinner");
-        this.getContentPane().add(startDateSpinner);
+        this.getContentPane().add(startDateSpinner,constraints);
+        constraints.gridx =1;
+        constraints.gridy =0;
         JLabel stop_date = new JLabel("End Datum");
         stop_date.setName("stop_date");
-        this.getContentPane().add(stop_date);
+        this.getContentPane().add(stop_date,constraints);
+        constraints.gridy = 1;
         JSpinner stopDateSpinner = new JSpinner(new SpinnerDateModel());
         stopDateSpinner.setName("stop_date_spinner");
-        this.getContentPane().add(stopDateSpinner);
+        this.getContentPane().add(stopDateSpinner,constraints);
+        constraints.gridx =0;
+        constraints.gridy = 2;
+        constraints.gridwidth = 2;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        JButton writeFile = new JButton("Write file");
+        writeFile.setName("start_writing_file");
+        this.getContentPane().add(writeFile,constraints);
         this.setVisible(true);
     }
 }

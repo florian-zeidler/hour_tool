@@ -1,5 +1,9 @@
 package hourtool.tool;
 
+import hourtool.swingui.MainWindow;
+
+import java.awt.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: florianzeidler
@@ -7,5 +11,14 @@ package hourtool.tool;
  * Time: 19:56
  * To change this template use File | Settings | File Templates.
  */
-public class Hourtool {
+public class Hourtool implements Runnable {
+
+    private MainWindow window;
+
+    public void run(){
+        this.window = new MainWindow();
+    }
+    public static void main(String[] args){
+        EventQueue.invokeLater(new Hourtool());
+    }
 }
