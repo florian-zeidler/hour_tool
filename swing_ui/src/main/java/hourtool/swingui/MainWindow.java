@@ -2,6 +2,8 @@ package hourtool.swingui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,7 +14,7 @@ import java.awt.*;
  */
 public class MainWindow extends JFrame {
 
-    public MainWindow() {
+    public MainWindow(final MainWindowActionListener listener) {
         super("Hour Tool");
         this.setSize(new Dimension(250,100));
         GridBagLayout layout = new GridBagLayout();

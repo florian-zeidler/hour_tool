@@ -1,6 +1,7 @@
 package hourtool.integration.test;
 
 import hourtool.swingui.MainWindow;
+import hourtool.swingui.MainWindowActionListener;
 import org.fest.swing.edt.GuiActionRunner;
 import org.fest.swing.edt.GuiQuery;
 import org.fest.swing.fixture.FrameFixture;
@@ -22,7 +23,7 @@ public class BaseTestFixture {
         MainWindow window = GuiActionRunner.execute(new GuiQuery<MainWindow>() {
             @Override
             protected MainWindow executeInEDT() throws Throwable {
-                return new MainWindow();  //To change body of implemented methods use File | Settings | File Templates.
+                return new MainWindow(new MainWindowActionListener());  //To change body of implemented methods use File | Settings | File Templates.
             }
         });
         fixture = new FrameFixture(window);

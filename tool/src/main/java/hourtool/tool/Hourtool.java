@@ -1,8 +1,10 @@
 package hourtool.tool;
 
 import hourtool.swingui.MainWindow;
+import hourtool.swingui.MainWindowActionListener;
 
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,12 +15,28 @@ import java.awt.*;
  */
 public class Hourtool implements Runnable {
 
+    /**
+     * Pointer to the main window.
+     */
     private MainWindow window;
 
-    public void run(){
-        this.window = new MainWindow();
+    /**
+     * Pointer to the Action Listener.
+     */
+    private MainWindowActionListener listener;
+
+    @Override
+    public final void run() {
+        this.listener = new MainWindowActionListener();
+        this.window = new MainWindow(listener);
     }
-    public static void main(String[] args){
+
+    /**
+     * This starts the whole thing.
+     *
+     * @param args Parameters from the command line.
+     */
+    public static void main(final String[] args) {
         EventQueue.invokeLater(new Hourtool());
     }
 }
